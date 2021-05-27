@@ -11,87 +11,18 @@ var app = new Vue(
         data: {
             mailUtenti: []
         },
-        mounted: function() {
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
-            axios
-                .get('https://flynn.boolean.careers/exercises/api/random/mail')
-                .then(
-                    (result) => {                    
-                        let mailUtente = result.data.response;
-                        this.mailUtenti.push(mailUtente);                        
-                    }
-                );
+        mounted: () => {
+            var self = this;
+            for (var i =0; i<10; i++) {
+                axios
+                    .get('https://flynn.boolean.careers/exercises/api/random/mail')
+                    .then(
+                        (result) => {                    
+                            let mailUtente = result.data.response;
+                            app.mailUtenti.push(mailUtente);                        
+                        }
+                    );
+            }
         }
     }
 )
