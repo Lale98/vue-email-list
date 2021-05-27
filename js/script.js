@@ -84,6 +84,14 @@ var app = new Vue(
                         this.mailUtenti.push(mailUtente);                        
                     }
                 );
+            axios
+                .get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then(
+                    (result) => {                    
+                        let mailUtente = result.data.response;
+                        this.mailUtenti.push(mailUtente);                        
+                    }
+                );
         }
     }
 )
